@@ -11,7 +11,6 @@ export default function Cadastrar() {
   const [id, setId] = useState(listaLocalStorage[listaLocalStorage.lenght - 1]?.id + 1 || 1); 
   const [link, setLink] = useState("")
   const [lista, setLista] = useState(listaLocalStorage);
-  
 
   useEffect(() => {
     localStorage.setItem("Lista", JSON.stringify(lista));
@@ -24,6 +23,9 @@ export default function Cadastrar() {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
+
+
+
 
     setLista([
       ...lista,
@@ -47,6 +49,9 @@ export default function Cadastrar() {
     setLink("")
   };
 
+
+
+  
   return (
     <div>
       <Menu/>

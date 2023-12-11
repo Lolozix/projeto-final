@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 
+
+
 export default function Card({cortes}){
  
     return(
+
+
+
             <div className="list-cortes">
                  <p>{cortes.titulo}</p>
                  <p>{cortes.descricao}</p>
@@ -21,6 +26,9 @@ export default function Card({cortes}){
                   <Link to={`/detalhe/${cortes.id}`}><button>Mais Informações</button></Link>
 
              </div>   
+
+
+
     )
 
 }

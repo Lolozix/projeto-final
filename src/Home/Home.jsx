@@ -10,11 +10,15 @@ export default function Home(){
       
       <Menu/>
 
+
+
       {lista.map((cortes) => 
 
         <Card cortes = {cortes}/>
 
       )}
+
+
 
       </div>
   )
