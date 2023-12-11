@@ -6,8 +6,6 @@ export default function Card({cortes}){
  
     return(
 
-
-
             <div className="list-cortes">
                  <p>{cortes.titulo}</p>
                  <p>{cortes.descricao}</p>
