@@ -7,6 +7,7 @@ export default function Destaque(){
   
     return(
 
+      
         <div>
           <Menu/>
       {lista.slice(-4).map((cortes) => 

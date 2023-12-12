@@ -1,3 +1,26 @@
+.info{
+  background-color: rgb(4, 20, 47);
+  color: white;
+  border-radius: 4px;
+  padding: 6px;
+  border: none;
+}
+
+.list-cortes{
+  margin-top: 30px;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.links{
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+}
+
+
+
+
 form {
   max-width: 600px;
   margin: 20px auto;
@@ -46,4 +69,54 @@ nav {
 
 nav:hover {
   background-color: #555;
+}
+
+
+
+div {
+  text-align: center;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+nav:hover {
+  background-color: #555;
+}
+
+h1 {
+  color: #333;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }

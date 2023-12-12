@@ -8,9 +8,9 @@ export default function Menu() {
 
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                 <div class="bg-dark p-4">
-                    <p><Link to={'/'}>Início</Link></p>
-                    <p><Link to={'/cadastrar'}>Cadastrar</Link></p>
-                    <p><Link to={'/destaque'}>Destaques</Link></p>
+                    <p><Link class="links" to={'/'}>Início</Link></p>
+                    <p><Link class="links" to={'/cadastrar'}>Cadastrar</Link></p>
+                    <p><Link class="links" to={'/destaque'}>Destaques</Link></p>
                 </div>
             </div>
 

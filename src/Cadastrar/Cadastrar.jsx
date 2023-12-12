@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Menu from "../Componentes/Card";
+import Menu from '../Componentes/Menu';
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastrar() {
   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || [];
@@ -11,14 +12,16 @@ export default function Cadastrar() {
   const [id, setId] = useState(
     listaLocalStorage.length > 0 ? listaLocalStorage[listaLocalStorage.length - 1].id + 1 : 1
   );
-  const [link, setLink] = useState("");
+  const [url, setUrl] = useState("");
   const [lista, setLista] = useState(listaLocalStorage);
 
   useEffect(() => {
     localStorage.setItem("Lista", JSON.stringify(lista));
   }, [lista]);
 
-  const salvar = (e) => {
+  const navigate = useNavigate("")
+
+  const salvar = async (e) => {
     e.preventDefault();
 
     if (!titulo || !descricao || !canal || !playlist || !data) {
@@ -26,7 +29,7 @@ export default function Cadastrar() {
       return;
     }
 
-    setLista([
+    await setLista([
       ...lista,
       {
         titulo,
@@ -35,7 +38,7 @@ export default function Cadastrar() {
         playlist,
         data,
         id,
-        link,
+        url
       },
     ]);
 
@@ -45,13 +48,15 @@ export default function Cadastrar() {
     setPlaylist("");
     setData("");
     setId(id + 1);
-    setLink("");
+    setUrl("");
+    navigate("/")
+   
   };
 
   return (
     <div>
       <Menu />
-      <div>
+      <div class="div">
       <form onSubmit={salvar}>
           <h2>Título:</h2>
           <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
@@ -68,8 +73,8 @@ export default function Cadastrar() {
           <h2>Data:</h2>
           <input type="text" value={data} onChange={(e) => setData(e.target.value)} />
 
-          <h2>Link:</h2>
-          <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
+          <h2>Url:</h2>
+          <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />
 
           <button type="submit">Salvar</button>
         </form>
